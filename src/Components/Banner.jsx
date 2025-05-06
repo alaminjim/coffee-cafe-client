@@ -7,7 +7,7 @@ import banner4 from "../assets/img/flat-design-coffee-shop-banner-set_23-2149238
 
 const Banner = () => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       <Carousel>
         <div>
           <img src={banner1} />

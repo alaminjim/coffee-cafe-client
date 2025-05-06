@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       <section className="bg-[#4a1e1b8a] py-10 rounded-md my-10">
         <h2 className="text-3xl font-bold text-center mb-8 text-amber-100">
           What Coffee Lovers Say

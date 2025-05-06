@@ -21,11 +21,11 @@ const MenuItems = () => {
           smooth aroma. Crafted from the finest beans
         </p>
       </div>
-      <div className="lg:flex justify-evenly">
+      <div className="lg:flex md:flex justify-evenly">
         <div>
-          <img className="w-[450px] " src={cup} alt="" />
+          <img className=" lg:w-[450px] md:w-[250px] " src={cup} alt="" />
         </div>
-        <div className="space-y-5 lg:pt-28 ml-5 *:gap-2 *:text-[#854d3d] *:font-semibold">
+        <div className="space-y-5 lg:pt-28 md:pt-12 ml-5 *:gap-2 *:text-[#854d3d] *:font-semibold">
           <div className="flex">
             <img className="object-contain w-6 h-6" src={premium} alt="" />
             <h1 className=" text-lg"> Premium Coffee</h1>
@@ -39,9 +39,9 @@ const MenuItems = () => {
             <h1 className=" text-lg"> Hot Coffee</h1>
           </div>
         </div>
-        <h1 className="w-1 h-48 bg-[#854d3d] mt-16 hidden"></h1>
+        <h1 className="w-1 h-48 bg-[#854d3d] mt-16 hidden lg:block"></h1>
         <hr className="text-[#854d3d] my-6 mx-3"></hr>
-        <div className="lg:pt-24 ml-5">
+        <div className="lg:pt-24 md:pt-8 ml-5">
           <h1 className="text-4xl font-dancing font-bold text-[#854d3dc4]">
             Tea Lover
           </h1>

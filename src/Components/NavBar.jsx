@@ -51,6 +51,7 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1 text-amber-100 gap-5 text-lg font-semibold">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/quires">Quires</NavLink>
+            <NavLink to="/add-quires">Add Quires</NavLink>
           </ul>
         </div>
         <div className="navbar-end">

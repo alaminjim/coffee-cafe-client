@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Quires from "../Pages/Quires";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import AddQuires from "../Pages/AddQuires";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/quires",
         element: <Quires></Quires>,
+      },
+      {
+        path: "/add-quires",
+        element: <AddQuires></AddQuires>,
       },
       {
         path: "/login",

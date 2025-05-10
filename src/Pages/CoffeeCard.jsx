@@ -61,9 +61,11 @@ const CoffeeCard = ({ coffee, allCoffee }) => {
                 Update
               </div>
             </Link>
-            <div className="badge btn bg-[#854d3d] text-amber-100 hover:border-[#85683d9a] hover:bg-base-200 hover:text-[#854d3daf] border-[1px]">
-              Details
-            </div>
+            <Link to={`/details/${_id}`}>
+              <div className="badge btn bg-[#854d3d] text-amber-100 hover:border-[#85683d9a] hover:bg-base-200 hover:text-[#854d3daf] border-[1px]">
+                Details
+              </div>
+            </Link>
             <div
               onClick={() => handelDelete(_id)}
               className="badge btn border-[1px] border-[#85683d9a] text-[#854d3daf] hover:bg-[#854d3d] hover:text-amber-100"

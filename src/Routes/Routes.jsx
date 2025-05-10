@@ -7,6 +7,7 @@ import Register from "../Pages/Register";
 import AddQuires from "../Pages/AddQuires";
 import ErrorPage from "../Pages/ErrorPage";
 import UpdateCoffee from "../Pages/UpdateCoffee";
+import CoffeeDetails from "../Pages/CoffeeDetails";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <UpdateCoffee></UpdateCoffee>,
+      },
+      {
+        path: "/details/:id",
+        element: <CoffeeDetails></CoffeeDetails>,
       },
     ],
   },

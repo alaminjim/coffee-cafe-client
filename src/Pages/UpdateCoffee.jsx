@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const UpdateCoffee = () => {
   const { id } = useParams();
   const [coffees, setCoffees] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     allCoffee();
@@ -42,6 +43,7 @@ const UpdateCoffee = () => {
       );
       if (data.modifiedCount > 0) {
         toast.success("Update Successful");
+        navigate("/quires");
       }
     } catch {
       toast.error("something went wrong");

@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AddQuires from "../Pages/AddQuires";
 import ErrorPage from "../Pages/ErrorPage";
+import UpdateCoffee from "../Pages/UpdateCoffee";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/update/:id",
+        element: <UpdateCoffee></UpdateCoffee>,
       },
     ],
   },

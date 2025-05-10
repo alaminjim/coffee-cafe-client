@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee, allCoffee }) => {
@@ -28,6 +29,7 @@ const CoffeeCard = ({ coffee, allCoffee }) => {
 
           allCoffee(); // reload or fetch again
         }
+        // eslint-disable-next-line no-unused-vars
       } catch (error) {
         Swal.fire({
           title: "Error!",
@@ -54,9 +56,11 @@ const CoffeeCard = ({ coffee, allCoffee }) => {
           </h2>
           <p>{title}</p>
           <div className="card-actions justify-end">
-            <div className="badge btn border-[1px] border-[#85683d9a] text-[#854d3daf] hover:bg-[#854d3d] hover:text-amber-100">
-              Update
-            </div>
+            <Link to={`/update/${_id}`}>
+              <div className="badge btn border-[1px] border-[#85683d9a] text-[#854d3daf] hover:bg-[#854d3d] hover:text-amber-100">
+                Update
+              </div>
+            </Link>
             <div className="badge btn bg-[#854d3d] text-amber-100 hover:border-[#85683d9a] hover:bg-base-200 hover:text-[#854d3daf] border-[1px]">
               Details
             </div>

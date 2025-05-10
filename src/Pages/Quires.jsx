@@ -15,7 +15,9 @@ const Quires = () => {
     setCoffees(data);
   };
 
-  console.log(coffees);
+  const sortedQueries = [...coffees].sort(
+    (a, b) => new Date(b.currentDate) - new Date(a.currentDate)
+  );
 
   return (
     <div>
@@ -28,9 +30,9 @@ const Quires = () => {
           </Link>
         </div>
       ) : (
-        <div>
-          {coffees.map((coffee) => (
-            <CoffeeCard coffee={coffee}></CoffeeCard>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3.5">
+          {sortedQueries.map((coffee) => (
+            <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
           ))}
         </div>
       )}

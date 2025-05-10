@@ -13,7 +13,7 @@ const ErrorPage = () => {
               Sorry, we couldn't find this page.
             </p>
             <p className="mt-4 mb-8 text-gray-600">
-              But dont worry, you can find plenty of other things on our
+              But don't worry, you can find plenty of other things on our
               homepage.
             </p>
             <Link to="/">

@@ -28,7 +28,7 @@ const CoffeeDetails = () => {
             />
           </div>
           <div className="pl-6">
-            <h1 className="text-4xl my-3 text-[#854d3d] font-bold">
+            <h1 className="text-4xl my-3 text-[#854d3d93] font-bold">
               {productName}
             </h1>
             <h1 className="text-2xl my-3 text-[#854d3d] font-bold">

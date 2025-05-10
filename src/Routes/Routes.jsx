@@ -8,6 +8,7 @@ import AddQuires from "../Pages/AddQuires";
 import ErrorPage from "../Pages/ErrorPage";
 import UpdateCoffee from "../Pages/UpdateCoffee";
 import CoffeeDetails from "../Pages/CoffeeDetails";
+import MyQuires from "../Pages/MyQuires";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/quires",
-        element: <Quires></Quires>,
+        path: "/my-quires",
+        element: <MyQuires></MyQuires>,
       },
       {
         path: "/add-quires",
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <CoffeeDetails></CoffeeDetails>,
+      },
+      {
+        path: "/quire",
+        element: <Quires></Quires>,
       },
     ],
   },

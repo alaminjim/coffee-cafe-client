@@ -5,11 +5,13 @@ import Quires from "../Pages/Quires";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AddQuires from "../Pages/AddQuires";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layouts></Layouts>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

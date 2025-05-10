@@ -1,5 +1,43 @@
-const CoffeeCard = ({ coffee }) => {
-  const { productName, brandName, productImage, title, reason } = coffee;
+import axios from "axios";
+import Swal from "sweetalert2";
+
+const CoffeeCard = ({ coffee, allCoffee }) => {
+  const { productName, brandName, productImage, title, _id } = coffee;
+
+  const handelDelete = async (_id) => {
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    });
+    if (result.isConfirmed) {
+      try {
+        const { data } = await axios.delete(
+          `http://localhost:5000/coffee-cafe/${_id}`
+        );
+        if (data.deletedCount > 0) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success",
+          });
+
+          allCoffee(); // reload or fetch again
+        }
+      } catch (error) {
+        Swal.fire({
+          title: "Error!",
+          text: "Some Went Wrong",
+          icon: "error",
+          confirmButtonText: "Cool",
+        });
+      }
+    }
+  };
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -16,8 +54,18 @@ const CoffeeCard = ({ coffee }) => {
           </h2>
           <p>{title}</p>
           <div className="card-actions justify-end">
-            <div className="badge badge-outline">Fashion</div>
-            <div className="badge badge-outline">Products</div>
+            <div className="badge btn border-[1px] border-[#85683d9a] text-[#854d3daf] hover:bg-[#854d3d] hover:text-amber-100">
+              Update
+            </div>
+            <div className="badge btn bg-[#854d3d] text-amber-100 hover:border-[#85683d9a] hover:bg-base-200 hover:text-[#854d3daf] border-[1px]">
+              Details
+            </div>
+            <div
+              onClick={() => handelDelete(_id)}
+              className="badge btn border-[1px] border-[#85683d9a] text-[#854d3daf] hover:bg-[#854d3d] hover:text-amber-100"
+            >
+              Delete
+            </div>
           </div>
         </div>
       </div>

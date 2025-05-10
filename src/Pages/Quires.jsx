@@ -32,7 +32,11 @@ const Quires = () => {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3.5">
           {sortedQueries.map((coffee) => (
-            <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+            <CoffeeCard
+              key={coffee._id}
+              coffee={coffee}
+              allCoffee={allCoffee}
+            ></CoffeeCard>
           ))}
         </div>
       )}

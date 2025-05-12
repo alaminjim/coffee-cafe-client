@@ -1,12 +1,24 @@
-# React + Vite
+# Product Recommendation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
 
-Currently, two official plugins are available:
+This website is designed to offer product recommendations based on user queries. Users can log in, submit queries regarding products, and receive personalized recommendations. The site also includes features for managing user queries and recommendations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live URL
 
-## Expanding the ESLint configuration
+[Your live site URL here]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+
+- **Authentication System**: Supports email/password login and Google sign-in.
+- **Conditional Navbar Rendering**: Navbar items change based on whether the user is logged in.
+- **Query Management**: Users can add, update, and delete product-related queries.
+- **Recommendations**: Personalized recommendations for each user based on their queries.
+- **Responsive Layout**: The website is mobile-friendly and adjusts to different screen sizes.
+- **Protected Routes**: Users can access certain pages (e.g., Add Query, My Queries) only when logged in.
+
+### Requirements
+
+- Node.js (>=16)
+- Firebase (for Authentication and Database)
+- React Router (for routin)

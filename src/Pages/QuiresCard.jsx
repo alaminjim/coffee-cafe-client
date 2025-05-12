@@ -13,7 +13,9 @@ const QuiresCard = ({ coffee, allCoffee, showRecommendation }) => {
 
   const handelRecommend = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/recommend/${id}`);
+      await axios.patch(
+        `https://coffee-cafe-server-qurnff92x-alaminjims-projects.vercel.app/recommend/${id}`
+      );
       allCoffee();
     } catch (error) {
       console.error("Failed to recommend:", error);

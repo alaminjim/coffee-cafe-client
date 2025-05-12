@@ -38,7 +38,7 @@ const AddQuires = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/coffee-cafe",
+        "https://coffee-cafe-server-qurnff92x-alaminjims-projects.vercel.app/coffee-cafe",
         products
       );
       if (data.insertedId) {

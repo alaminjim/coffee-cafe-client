@@ -40,7 +40,52 @@ const NavBar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            ></ul>
+            >
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "btn bg-[#854d3dea] text-amber-100"
+                    : "text-amber-100 gap-5 text-lg font-semibold"
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+              {user && (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "btn bg-[#854d3dea] text-amber-100"
+                      : "text-amber-100 gap-5 text-lg font-semibold"
+                  }
+                  to="/my-quires"
+                >
+                  My Quires
+                </NavLink>
+              )}
+              {user && (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "btn bg-[#854d3dea] text-amber-100"
+                      : "text-amber-100 gap-5 text-lg font-semibold"
+                  }
+                  to="/add-quires"
+                >
+                  Add Quires
+                </NavLink>
+              )}
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "btn bg-[#854d3dea] text-amber-100"
+                    : "text-amber-100 gap-5 text-lg font-semibold"
+                }
+                to="/quire"
+              >
+                Quires
+              </NavLink>
+            </ul>
           </div>
           <div className="flex items-center gap-2">
             <img src={logo} alt="" />
@@ -48,11 +93,51 @@ const NavBar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-amber-100 gap-5 text-lg font-semibold">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/my-quires">My Quires</NavLink>
-            <NavLink to="/add-quires">Add Quires</NavLink>
-            <NavLink to="/quire">Quires</NavLink>
+          <ul className="menu menu-horizontal px-1 gap-5 ">
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "btn bg-[#854d3dea] text-amber-100"
+                  : "text-amber-100 gap-5 text-lg font-semibold"
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
+            {user && (
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "btn bg-[#854d3dea] text-amber-100"
+                    : "text-amber-100 gap-5 text-lg font-semibold"
+                }
+                to="/my-quires"
+              >
+                My Quires
+              </NavLink>
+            )}
+            {user && (
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "btn bg-[#854d3dea] text-amber-100"
+                    : "text-amber-100 gap-5 text-lg font-semibold"
+                }
+                to="/add-quires"
+              >
+                Add Quires
+              </NavLink>
+            )}
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "btn bg-[#854d3dea] text-amber-100"
+                  : "text-amber-100 gap-5 text-lg font-semibold"
+              }
+              to="/quire"
+            >
+              Quires
+            </NavLink>
           </ul>
         </div>
         <div className="navbar-end">

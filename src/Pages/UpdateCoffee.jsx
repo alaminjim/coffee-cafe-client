@@ -13,7 +13,9 @@ const UpdateCoffee = () => {
   }, []);
 
   const allCoffee = async () => {
-    const { data } = await axios.get(`http://localhost:5000/coffee-cafe/${id}`);
+    const { data } = await axios.get(
+      `https://coffee-cafe-server-qurnff92x-alaminjims-projects.vercel.app/coffee-cafe/${id}`
+    );
     setCoffees(data);
   };
 
@@ -38,7 +40,7 @@ const UpdateCoffee = () => {
 
     try {
       const { data } = await axios.patch(
-        `http://localhost:5000/coffee-cafe/${id}`,
+        `https://coffee-cafe-server-qurnff92x-alaminjims-projects.vercel.app/coffee-cafe/${id}`,
         updateProducts
       );
       if (data.modifiedCount > 0) {

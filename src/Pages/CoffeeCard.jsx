@@ -18,7 +18,7 @@ const CoffeeCard = ({ coffee, allCoffee }) => {
     if (result.isConfirmed) {
       try {
         const { data } = await axios.delete(
-          `http://localhost:5000/coffee-cafe/${_id}`
+          `https://coffee-cafe-server-qurnff92x-alaminjims-projects.vercel.app/coffee-cafe/${_id}`
         );
         if (data.deletedCount > 0) {
           Swal.fire({

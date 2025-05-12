@@ -13,7 +13,9 @@ const Home = () => {
   }, []);
 
   const allCoffee = async () => {
-    const { data } = await axios.get("http://localhost:5000/coffee-cafe");
+    const { data } = await axios.get(
+      "https://coffee-cafe-server-qurnff92x-alaminjims-projects.vercel.app/coffee-cafe"
+    );
     setCoffees(data);
   };
   return (

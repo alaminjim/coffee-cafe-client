@@ -32,7 +32,7 @@ const Register = () => {
         navigate("/");
       })
       .catch((err) => {
-        console.log(err.message);
+        toast.error(err.message);
       });
 
     const passValid = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;

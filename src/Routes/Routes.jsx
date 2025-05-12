@@ -9,6 +9,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import UpdateCoffee from "../Pages/UpdateCoffee";
 import CoffeeDetails from "../Pages/CoffeeDetails";
 import MyQuires from "../Pages/MyQuires";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -22,11 +23,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-quires",
-        element: <MyQuires></MyQuires>,
+        element: (
+          <PrivateRoute>
+            <MyQuires></MyQuires>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/add-quires",
-        element: <AddQuires></AddQuires>,
+        element: (
+          <PrivateRoute>
+            <AddQuires></AddQuires>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

@@ -23,7 +23,6 @@ const Login = () => {
     createSignIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
 
         setUser(user);
         toast.success("sign in successful..!");

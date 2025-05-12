@@ -12,7 +12,7 @@ const NavBar = () => {
         toast.success("sign out successful");
       })
       .catch((err) => {
-        console.log(err.message);
+        toast.error(err.message);
       });
   };
   return (

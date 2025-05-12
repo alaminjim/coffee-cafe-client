@@ -9,9 +9,7 @@ const SocialLogin = () => {
 
   const handelLogin = () => {
     googleLogIn()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
         toast.success("Successful log in");
         navigate("/");
       })
